@@ -2,7 +2,8 @@
 
 /* Interface */
 #define function toUint8(uint256) view returns (uint8)
-
+/* Interface */
+#define function toUint8(uint256) view returns (uint8)
 
 
 #define macro MAIN() = takes (0) returns (0) {
@@ -10,12 +11,14 @@
     0x04 calldataload
     0x00 calldataload 0xE0 shr
     __FUNC_SIG(toUint8) eq u8 jumpi
-    0x20 0x20 0xcaffee
-    0x60 0x00 revert
+    0x00 0x00 revert
 
     u8:
-       TO_UINT8()  
+       TO_UINT8() 
 
+    ret:
+        0x00 mstore
+        0x20 0x00 return 
 }
 
 
