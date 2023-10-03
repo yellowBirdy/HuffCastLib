@@ -2,19 +2,21 @@
 
 /* Interface */
 #define function toUint8(uint256) view returns (uint8)
-/* Interface */
-#define function toUint8(uint256) view returns (uint8)
+#define function toUint16(uint256) view returns (uint16)
 
 
 #define macro MAIN() = takes (0) returns (0) {
     // Identify which function is being called.
-    0x04 calldataload
-    0x00 calldataload 0xE0 shr
-    __FUNC_SIG(toUint8) eq u8 jumpi
+    0x00 calldataload 0xE0 shr             //  [sel]
+    0x04 calldataload                      //  [input,sel]
+    dup2 __FUNC_SIG(toUint8) eq u8 jumpi   //  
+    dup2 __FUNC_SIG(toUint16) eq u16 jumpi
     0x00 0x00 revert
 
     u8:
        TO_UINT8() 
+    u16:
+       TO_UINT16() 
 
     ret:
         0x00 mstore

@@ -14,19 +14,33 @@ contract HuffCastTest is Test {
 
     }
 
-    function testHhappy(uint256 value) public {
-        vm.assume(value < 256);
+    function testHappyToUint8(uint256 value) public {
+        vm.assume(value <= type(uint8).max);
   
-        uint8 casted = huffUser.toUint8(value);
-        assertEq(casted, value);
-        assertLt(casted, type(uint8).max);
+        uint8 casted8 = huffUser.toUint8(value);
+        assertEq(casted8, value);
+        assertLe(casted8, type(uint8).max);
+    }
+    function testHappyToUint16(uint256 value) public {
+        vm.assume(value <= type(uint16).max);
+
+        uint16 casted16 = huffUser.toUint16(value);
+        assertEq(casted16, value);
+        assertLe(casted16, type(uint16).max);
 
     }
-    function testUnhappy(uint256 value) public {
-        vm.assume(value > 255);
+    function testUnhappyToUint8(uint256 value) public {
+        vm.assume(value > type(uint8).max);
   
-        vm.expectRevert(bytes4(0x35278d12));
+        vm.expectRevert(bytes4(0x35278d12));  //  Overflow() selector
         huffUser.toUint8(value);
+    }
+    function testUnhappyToUint16(uint256 value) public {
+
+        vm.assume(value > type(uint16).max);
+  
+        vm.expectRevert(bytes4(0x35278d12));  //  Overflow() selector
+        huffUser.toUint16(value);
 
     }
 
