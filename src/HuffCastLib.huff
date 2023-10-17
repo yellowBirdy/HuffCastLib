@@ -1,4 +1,39 @@
+//#define constant __UINT248_MAX_PLUS_ONE = 
+//#define constant __UINT240_MAX_PLUS_ONE = 
+//#define constant __UINT232_MAX_PLUS_ONE = 
+//#define constant __UINT224_MAX_PLUS_ONE = 
+//#define constant __UINT216_MAX_PLUS_ONE = 
+//#define constant __UINT208_MAX_PLUS_ONE = 
+//#define constant __UINT200_MAX_PLUS_ONE = 
+//#define constant __UINT192_MAX_PLUS_ONE = 
+//#define constant __UINT184_MAX_PLUS_ONE = 
+//#define constant __UINT176_MAX_PLUS_ONE = 
+//#define constant __UINT168_MAX_PLUS_ONE = 
+//#define constant __UINT160_MAX_PLUS_ONE = 
+//#define constant __UINT152_MAX_PLUS_ONE = 
+//#define constant __UINT144_MAX_PLUS_ONE = 
+//#define constant __UINT136_MAX_PLUS_ONE = 
+//#define constant __UINT128_MAX_PLUS_ONE = 
+//#define constant __UINT120_MAX_PLUS_ONE = 
+//#define constant __UINT112_MAX_PLUS_ONE = 
+//#define constant __UINT104_MAX_PLUS_ONE = 
+//#define constant __UINT96_MAX_PLUS_ONE  = 
+//#define constant __UINT88_MAX_PLUS_ONE  = 
+//#define constant __UINT80_MAX_PLUS_ONE  = 
+//#define constant __UINT72_MAX_PLUS_ONE  = 
+//#define constant __UINT64_MAX_PLUS_ONE  = 
+//#define constant __UINT56_MAX_PLUS_ONE  = 
+//#define constant __UINT48_MAX_PLUS_ONE  = 
+//#define constant __UINT40_MAX_PLUS_ONE  = 
+//#define constant __UINT32_MAX_PLUS_ONE  = 
+
+
 #define error Overflow()
+
+
+//#define constant __UINT24_MAX_PLUS_ONE  = 0x1000000
+//#define constant __UINT16_MAX_PLUS_ONE  = 0x10000
+//#define constant __UINT8_MAX_PLUS_ONE   = 0x100
 
 /* Methods */
 
@@ -16,11 +51,93 @@
     success:           
 }
 #define macro TO_UINT16() = takes (1) returns (1) {  
-    0x10000            
+    0x10000        
     dup2             
     lt              
     success jumpi     
     REVERT_OVERFLOW()
     success:            
 }
+#define macro TO_UINT24() = takes (1) returns (1) {  
+    0x1000000            
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:           
+}
+#define macro TO_UINT32() = takes (1) returns (1) {  
+    0x100000000        
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:            
+}
+#define macro TO_UINT40() = takes (1) returns (1) {  
+    0x10000000000        
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:            
+}
+#define macro TO_UINT48() = takes (1) returns (1) {  
+    0x1000000000000        
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:            
+}
+#define macro TO_UINT56() = takes (1) returns (1) {  
+    0x100000000000000        
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:            
+}
+#define macro TO_UINT64() = takes (1) returns (1) {  
+    0x10000000000000000        
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:            
+}
+#define macro TO_UINT72() = takes (1) returns (1) {  
+    0x1000000000000000000        
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:            
+}
+#define macro TO_UINT80() = takes (1) returns (1) {  
+    0x100000000000000000000        
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:            
+}
+#define macro TO_UINT88() = takes (1) returns (1) {  
+    0x10000000000000000000000        
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:            
+}
+#define macro TO_UINT96() = takes (1) returns (1) {  
+    0x1000000000000000000000000        
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:            
+}
+
+
 

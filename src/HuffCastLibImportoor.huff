@@ -3,24 +3,66 @@
 /* Interface */
 #define function toUint8(uint256) view returns (uint8)
 #define function toUint16(uint256) view returns (uint16)
+#define function toUint24(uint256) view returns (uint24)
+#define function toUint32(uint256) view returns (uint32)
+#define function toUint40(uint256) view returns (uint40)
+#define function toUint48(uint256) view returns (uint48)
+#define function toUint56(uint256) view returns (uint56)
+#define function toUint64(uint256) view returns (uint64)
+#define function toUint72(uint256) view returns (uint72)
+#define function toUint80(uint256) view returns (uint80)
+#define function toUint88(uint256) view returns (uint88)
+#define function toUint96(uint256) view returns (uint96)
 
 
 #define macro MAIN() = takes (0) returns (0) {
-    // Identify which function is being called.
-    0x00 calldataload 0xE0 shr             //  [sel]
-    0x04 calldataload                      //  [input,sel]
-    dup2 __FUNC_SIG(toUint8) eq u8 jumpi   //  
-    dup2 __FUNC_SIG(toUint16) eq u16 jumpi
-    0x00 0x00 revert
+   // Identify which function is being called.
+   0x00 calldataload 0xE0 shr             //  [sel]
+   0x04 calldataload                      //  [input,sel]
+   dup2 __FUNC_SIG(toUint8) eq u8 jumpi     
+   dup2 __FUNC_SIG(toUint16) eq u16 jumpi
+   dup2 __FUNC_SIG(toUint24) eq u24 jumpi     
+   dup2 __FUNC_SIG(toUint32) eq u32 jumpi
+   dup2 __FUNC_SIG(toUint40) eq u40 jumpi
+   dup2 __FUNC_SIG(toUint48) eq u48 jumpi
+   dup2 __FUNC_SIG(toUint56) eq u56 jumpi
+   dup2 __FUNC_SIG(toUint64) eq u64 jumpi
+   dup2 __FUNC_SIG(toUint72) eq u72 jumpi
+   dup2 __FUNC_SIG(toUint80) eq u80 jumpi
+   dup2 __FUNC_SIG(toUint88) eq u88 jumpi
+   dup2 __FUNC_SIG(toUint96) eq u96 jumpi
 
-    u8:
-       TO_UINT8() 
-    u16:
-       TO_UINT16() 
+   0x00 0x00 revert
 
-    ret:
-        0x00 mstore
-        0x20 0x00 return 
+   u8:
+      TO_UINT8() 
+   u16:
+      TO_UINT16() 
+   u24:
+      TO_UINT24() 
+   u32:
+      TO_UINT32() 
+   u40:
+      TO_UINT40() 
+   u48:
+      TO_UINT48() 
+   u56:
+      TO_UINT56() 
+   u64:
+      TO_UINT64() 
+   u72:
+      TO_UINT72()
+   u80:
+      TO_UINT80()
+   u88:
+      TO_UINT88()
+   u96:
+      TO_UINT96()
+
+
+   ret:
+      0x00 mstore
+      0x20 0x00 return 
 }
 
 
