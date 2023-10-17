@@ -138,6 +138,157 @@
     REVERT_OVERFLOW()
     success:            
 }
-
-
-
+// macros for 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248
+#define macro TO_UINT104() = takes (1) returns (1) {
+    0x100000000000000000000000000        
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:            
+}
+#define macro TO_UINT112() = takes (1) returns (1) {
+    0x10000000000000000000000000000        
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:            
+}
+#define macro TO_UINT120() = takes (1) returns (1) {
+    0x1000000000000000000000000000000        
+    dup2             
+    lt              
+    success jumpi     
+    REVERT_OVERFLOW()
+    success:            
+}
+#define macro TO_UINT128() = takes (1) returns (1) {
+    0x100000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT136() = takes (1) returns (1) {
+    0x10000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT144() = takes (1) returns (1) {
+    0x1000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT152() = takes (1) returns (1) {
+    0x100000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT160() = takes (1) returns (1) {   
+    0x10000000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT168() = takes (1) returns (1) {
+    0x1000000000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT176() = takes (1) returns (1) {
+    0x100000000000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT184() = takes (1) returns (1) {
+    0x10000000000000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT192() = takes (1) returns (1) {
+    0x1000000000000000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT200() = takes (1) returns (1) {
+    0x100000000000000000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT208() = takes (1) returns (1) {
+    0x10000000000000000000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT216() = takes (1) returns (1) {
+    0x1000000000000000000000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT224() = takes (1) returns (1) {
+    0x100000000000000000000000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT232() = takes (1) returns (1) {
+    0x10000000000000000000000000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT240() = takes (1) returns (1) {
+    0x1000000000000000000000000000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_UINT248() = takes (1) returns (1) {
+    0x100000000000000000000000000000000000000000000000000000000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+    

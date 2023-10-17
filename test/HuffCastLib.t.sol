@@ -109,6 +109,161 @@ contract HuffCastTest is Test {
         assertLe(casted96, type(uint96).max);
 
     }
+    // functions testing happy paths from uint104 up to uint256
+    function testHappyToUint104(uint256 value) public {
+        vm.assume(value <= type(uint104).max);
+
+        uint104 casted104 = huffUser.toUint104(value);
+        assertEq(casted104, value);
+        assertLe(casted104, type(uint104).max);
+
+    }
+    function testHappyToUint112(uint256 value) public {
+        vm.assume(value <= type(uint112).max);
+
+        uint112 casted112 = huffUser.toUint112(value);
+        assertEq(casted112, value);
+        assertLe(casted112, type(uint112).max);
+
+    }
+    function testHappyToUint120(uint256 value) public {
+        vm.assume(value <= type(uint120).max);
+
+        uint120 casted120 = huffUser.toUint120(value);
+        assertEq(casted120, value);
+        assertLe(casted120, type(uint120).max);
+
+    }
+    function testHappyToUint128(uint256 value) public {
+        vm.assume(value <= type(uint128).max);
+
+        uint128 casted128 = huffUser.toUint128(value);
+        assertEq(casted128, value);
+        assertLe(casted128, type(uint128).max);
+
+    }
+    function testHappyToUint136(uint256 value) public {
+        vm.assume(value <= type(uint136).max);
+
+        uint136 casted136 = huffUser.toUint136(value);
+        assertEq(casted136, value);
+        assertLe(casted136, type(uint136).max);
+
+    }
+    function testHappyToUint144(uint256 value) public {
+        vm.assume(value <= type(uint144).max);
+
+        uint144 casted144 = huffUser.toUint144(value);
+        assertEq(casted144, value);
+        assertLe(casted144, type(uint144).max);
+
+    }
+    function testHappyToUint152(uint256 value) public {
+        vm.assume(value <= type(uint152).max);
+
+        uint152 casted152 = huffUser.toUint152(value);
+        assertEq(casted152, value);
+        assertLe(casted152, type(uint152).max);
+
+    }
+    function testHappyToUint160(uint256 value) public {
+        vm.assume(value <= type(uint160).max);
+
+        uint160 casted160 = huffUser.toUint160(value);
+        assertEq(casted160, value);
+        assertLe(casted160, type(uint160).max);
+
+    }
+    function testHappyToUint168(uint256 value) public {
+        vm.assume(value <= type(uint168).max);
+
+        uint168 casted168 = huffUser.toUint168(value);
+        assertEq(casted168, value);
+        assertLe(casted168, type(uint168).max);
+
+    }
+    function testHappyToUint176(uint256 value) public {
+        vm.assume(value <= type(uint176).max);
+
+        uint176 casted176 = huffUser.toUint176(value);
+        assertEq(casted176, value);
+        assertLe(casted176, type(uint176).max);
+
+    }
+    function testHappyToUint184(uint256 value) public {
+        vm.assume(value <= type(uint184).max);
+
+        uint184 casted184 = huffUser.toUint184(value);
+        assertEq(casted184, value);
+        assertLe(casted184, type(uint184).max);
+
+    }
+    function testHappyToUint192(uint256 value) public {
+        vm.assume(value <= type(uint192).max);
+
+        uint192 casted192 = huffUser.toUint192(value);
+        assertEq(casted192, value);
+        assertLe(casted192, type(uint192).max);
+
+    }
+    function testHappyToUint200(uint256 value) public {
+        vm.assume(value <= type(uint200).max);
+
+        uint200 casted200 = huffUser.toUint200(value);
+        assertEq(casted200, value);
+        assertLe(casted200, type(uint200).max);
+
+    }
+    function testHappyToUint208(uint256 value) public {
+        vm.assume(value <= type(uint208).max);
+
+        uint208 casted208 = huffUser.toUint208(value);
+        assertEq(casted208, value);
+        assertLe(casted208, type(uint208).max);
+
+    }
+    function testHappyToUint216(uint256 value) public {
+        vm.assume(value <= type(uint216).max);
+
+        uint216 casted216 = huffUser.toUint216(value);
+        assertEq(casted216, value);
+        assertLe(casted216, type(uint216).max);
+
+    }
+    function testHappyToUint224(uint256 value) public {
+        vm.assume(value <= type(uint224).max);
+
+        uint224 casted224 = huffUser.toUint224(value);
+        assertEq(casted224, value);
+        assertLe(casted224, type(uint224).max);
+
+    }
+    function testHappyToUint232(uint256 value) public {
+        vm.assume(value <= type(uint232).max);
+
+        uint232 casted232 = huffUser.toUint232(value);
+        assertEq(casted232, value);
+        assertLe(casted232, type(uint232).max);
+
+    }
+    function testHappyToUint240(uint256 value) public {
+        vm.assume(value <= type(uint240).max);
+
+        uint240 casted240 = huffUser.toUint240(value);
+        assertEq(casted240, value);
+        assertLe(casted240, type(uint240).max);
+
+    }
+    function testHappyToUint248(uint256 value) public {
+        vm.assume(value <= type(uint248).max);
+
+        uint248 casted248 = huffUser.toUint248(value);
+        assertEq(casted248, value);
+        assertLe(casted248, type(uint248).max);
+
+    }
+    // unhappy paths
+
     function testUnhappyToUint8(uint256 value) public {
         vm.assume(value > type(uint8).max);
   
@@ -191,7 +346,143 @@ contract HuffCastTest is Test {
         vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
         huffUser.toUint96(value);
     }
+    //  testUnhappyToUinX tests from uint104 up to uint256      
+    function testUnhappyToUint104(uint256 value) public {
+
+        vm.assume(value > type(uint104).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint104(value);
+    }   
+    function testUnhappyToUint112(uint256 value) public {
+
+        vm.assume(value > type(uint112).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint112(value);
+    }
+    function testUnhappyToUint120(uint256 value) public {
+
+        vm.assume(value > type(uint120).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint120(value);
+    }
+    function testUnhappyToUint128(uint256 value) public {
+
+        vm.assume(value > type(uint128).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint128(value);
+    }
+    function testUnhappyToUint136(uint256 value) public {
+
+        vm.assume(value > type(uint136).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint136(value);
+    }
+    function testUnhappyToUint144(uint256 value) public {
+
+        vm.assume(value > type(uint144).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint144(value);
+    }
+    function testUnhappyToUint152(uint256 value) public {
+
+        vm.assume(value > type(uint152).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint152(value);
+    }
+    function testUnhappyToUint160(uint256 value) public {
+
+        vm.assume(value > type(uint160).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint160(value);
+    }
+    function testUnhappyToUint168(uint256 value) public {
+
+        vm.assume(value > type(uint168).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint168(value);
+    }
+    function testUnhappyToUint176(uint256 value) public {
+
+        vm.assume(value > type(uint176).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint176(value);
+    }
+    function testUnhappyToUint184(uint256 value) public {
+
+        vm.assume(value > type(uint184).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint184(value);
+    }
     
+    function testUnhappyToUint192(uint256 value) public {
+
+        vm.assume(value > type(uint192).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint192(value);
+    }
+    function testUnhappyToUint200(uint256 value) public {
+
+        vm.assume(value > type(uint200).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint200(value);
+    }
+    function testUnhappyToUint208(uint256 value) public {
+
+        vm.assume(value > type(uint208).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint208(value);
+    }
+    function testUnhappyToUint216(uint256 value) public {
+
+        vm.assume(value > type(uint216).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint216(value);
+    }
+    function testUnhappyToUint224(uint256 value) public {
+
+        vm.assume(value > type(uint224).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint224(value);
+    }
+    function testUnhappyToUint232(uint256 value) public {
+
+        vm.assume(value > type(uint232).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint232(value);
+    }
+    function testUnhappyToUint240(uint256 value) public {
+
+        vm.assume(value > type(uint240).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint240(value);
+    }
+    function testUnhappyToUint248(uint256 value) public {
+
+        vm.assume(value > type(uint248).max);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint248(value);
+    }
+ 
+
  
 }
 
@@ -209,7 +500,25 @@ interface SafeCastLibImplementoor {
     function toUint80(uint256 value) external returns (uint80);
     function toUint88(uint256 value) external returns (uint88);
     function toUint96(uint256 value) external returns (uint96);
+    function toUint104(uint256 value) external returns (uint104);
+    function toUint112(uint256 value) external returns (uint112);
+    function toUint120(uint256 value) external returns (uint120);
     function toUint128(uint256 value) external returns (uint128);
+    function toUint136(uint256 value) external returns (uint136);
+    function toUint144(uint256 value) external returns (uint144);
+    function toUint152(uint256 value) external returns (uint152);
+    function toUint160(uint256 value) external returns (uint160);
+    function toUint168(uint256 value) external returns (uint168);
+    function toUint176(uint256 value) external returns (uint176);
+    function toUint184(uint256 value) external returns (uint184);
+    function toUint192(uint256 value) external returns (uint192);
+    function toUint200(uint256 value) external returns (uint200);
+    function toUint208(uint256 value) external returns (uint208);
+    function toUint216(uint256 value) external returns (uint216);
+    function toUint224(uint256 value) external returns (uint224);
+    function toUint232(uint256 value) external returns (uint232);
+    function toUint240(uint256 value) external returns (uint240);
+    function toUint248(uint256 value) external returns (uint248);
 
     error Overflow();
 }

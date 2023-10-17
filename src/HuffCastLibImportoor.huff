@@ -13,6 +13,26 @@
 #define function toUint80(uint256) view returns (uint80)
 #define function toUint88(uint256) view returns (uint88)
 #define function toUint96(uint256) view returns (uint96)
+#define function toUint104(uint256) view returns (uint104)
+#define function toUint112(uint256) view returns (uint112)
+#define function toUint120(uint256) view returns (uint120)
+#define function toUint128(uint256) view returns (uint128)
+#define function toUint136(uint256) view returns (uint136)
+#define function toUint144(uint256) view returns (uint144)
+#define function toUint152(uint256) view returns (uint152)
+#define function toUint160(uint256) view returns (uint160)
+#define function toUint168(uint256) view returns (uint168)
+#define function toUint176(uint256) view returns (uint176)
+#define function toUint184(uint256) view returns (uint184)
+#define function toUint192(uint256) view returns (uint192)
+#define function toUint200(uint256) view returns (uint200)
+#define function toUint208(uint256) view returns (uint208)
+#define function toUint216(uint256) view returns (uint216)
+#define function toUint224(uint256) view returns (uint224)
+#define function toUint232(uint256) view returns (uint232)
+#define function toUint240(uint256) view returns (uint240)
+#define function toUint248(uint256) view returns (uint248)
+
 
 
 #define macro MAIN() = takes (0) returns (0) {
@@ -31,6 +51,26 @@
    dup2 __FUNC_SIG(toUint80) eq u80 jumpi
    dup2 __FUNC_SIG(toUint88) eq u88 jumpi
    dup2 __FUNC_SIG(toUint96) eq u96 jumpi
+   dup2 __FUNC_SIG(toUint104) eq u104 jumpi
+   dup2 __FUNC_SIG(toUint112) eq u112 jumpi
+   dup2 __FUNC_SIG(toUint120) eq u120 jumpi
+   dup2 __FUNC_SIG(toUint128) eq u128 jumpi
+   dup2 __FUNC_SIG(toUint136) eq u136 jumpi
+   dup2 __FUNC_SIG(toUint144) eq u144 jumpi
+   dup2 __FUNC_SIG(toUint152) eq u152 jumpi
+   dup2 __FUNC_SIG(toUint160) eq u160 jumpi
+   dup2 __FUNC_SIG(toUint168) eq u168 jumpi
+   dup2 __FUNC_SIG(toUint176) eq u176 jumpi
+   dup2 __FUNC_SIG(toUint184) eq u184 jumpi
+   dup2 __FUNC_SIG(toUint192) eq u192 jumpi
+   dup2 __FUNC_SIG(toUint200) eq u200 jumpi
+   dup2 __FUNC_SIG(toUint208) eq u208 jumpi
+   dup2 __FUNC_SIG(toUint216) eq u216 jumpi
+   dup2 __FUNC_SIG(toUint224) eq u224 jumpi
+   dup2 __FUNC_SIG(toUint232) eq u232 jumpi
+   dup2 __FUNC_SIG(toUint240) eq u240 jumpi
+   dup2 __FUNC_SIG(toUint248) eq u248 jumpi
+
 
    0x00 0x00 revert
 
@@ -58,7 +98,44 @@
       TO_UINT88()
    u96:
       TO_UINT96()
-
+   u104:
+      TO_UINT104()
+   u112:
+      TO_UINT112()
+   u120:
+      TO_UINT120()
+   u128:
+      TO_UINT128()
+   u136:
+      TO_UINT136()
+   u144: 
+      TO_UINT144()
+   u152:
+      TO_UINT152()
+   u160:
+      TO_UINT160()
+   u168:
+      TO_UINT168()
+   u176:
+      TO_UINT176()
+   u184: 
+      TO_UINT184()
+   u192: 
+      TO_UINT192()
+   u200:
+      TO_UINT200()
+   u208: 
+      TO_UINT208()   
+   u216: 
+      TO_UINT216()   
+   u224:
+      TO_UINT224()
+   u232:
+      TO_UINT232()
+   u240:
+      TO_UINT240()
+   u248:
+      TO_UINT248()
 
    ret:
       0x00 mstore
