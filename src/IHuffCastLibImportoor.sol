@@ -1,0 +1,35 @@
+interface IHuffCastLibImportoor {
+	error Overflow();
+	function toInt8(uint256) external view returns (int8);
+	function toUint104(uint256) external view returns (uint104);
+	function toUint112(uint256) external view returns (uint112);
+	function toUint120(uint256) external view returns (uint120);
+	function toUint128(uint256) external view returns (uint128);
+	function toUint136(uint256) external view returns (uint136);
+	function toUint144(uint256) external view returns (uint144);
+	function toUint152(uint256) external view returns (uint152);
+	function toUint16(uint256) external view returns (uint16);
+	function toUint160(uint256) external view returns (uint160);
+	function toUint168(uint256) external view returns (uint168);
+	function toUint176(uint256) external view returns (uint176);
+	function toUint184(uint256) external view returns (uint184);
+	function toUint192(uint256) external view returns (uint192);
+	function toUint200(uint256) external view returns (uint200);
+	function toUint208(uint256) external view returns (uint208);
+	function toUint216(uint256) external view returns (uint216);
+	function toUint224(uint256) external view returns (uint224);
+	function toUint232(uint256) external view returns (uint232);
+	function toUint24(uint256) external view returns (uint24);
+	function toUint240(uint256) external view returns (uint240);
+	function toUint248(uint256) external view returns (uint248);
+	function toUint32(uint256) external view returns (uint32);
+	function toUint40(uint256) external view returns (uint40);
+	function toUint48(uint256) external view returns (uint48);
+	function toUint56(uint256) external view returns (uint56);
+	function toUint64(uint256) external view returns (uint64);
+	function toUint72(uint256) external view returns (uint72);
+	function toUint8(uint256) external view returns (uint8);
+	function toUint80(uint256) external view returns (uint80);
+	function toUint88(uint256) external view returns (uint88);
+	function toUint96(uint256) external view returns (uint96);
+}

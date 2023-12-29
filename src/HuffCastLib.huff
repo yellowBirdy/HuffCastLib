@@ -290,5 +290,14 @@
     success jumpi
     REVERT_OVERFLOW()
     success:
+}  
+
+
+#define macro TO_INT8() = takes (1) returns (1) {
+    0x80  
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
 }
-    

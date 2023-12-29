@@ -262,7 +262,20 @@ contract HuffCastTest is Test {
         assertLe(casted248, type(uint248).max);
 
     }
+    function testHappyToInt8(uint256 value) public {
+        vm.assume(value <= type(uint8).max/2);
+  
+        int8 casted8 = huffUser.toInt8(value);
+        assertEq(abi.decode(abi.encode(casted8),(uint256)), value);
+        assertLe(casted8, type(int8).max);
+    }
     // unhappy paths
+    function testUnhappyToInt8(uint256 value) public {
+        vm.assume(value > type(uint8).max/2);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt8(value);
+    }
 
     function testUnhappyToUint8(uint256 value) public {
         vm.assume(value > type(uint8).max);
@@ -482,7 +495,6 @@ contract HuffCastTest is Test {
         huffUser.toUint248(value);
     }
  
-
  
 }
 
@@ -519,6 +531,8 @@ interface SafeCastLibImplementoor {
     function toUint232(uint256 value) external returns (uint232);
     function toUint240(uint256 value) external returns (uint240);
     function toUint248(uint256 value) external returns (uint248);
+
+    function toInt8(uint256) external view returns (int8);
 
     error Overflow();
 }

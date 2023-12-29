@@ -32,6 +32,8 @@
 #define function toUint232(uint256) view returns (uint232)
 #define function toUint240(uint256) view returns (uint240)
 #define function toUint248(uint256) view returns (uint248)
+#define function toInt8(uint256) view returns (int8)
+
 
 
 
@@ -70,73 +72,109 @@
    dup2 __FUNC_SIG(toUint232) eq u232 jumpi
    dup2 __FUNC_SIG(toUint240) eq u240 jumpi
    dup2 __FUNC_SIG(toUint248) eq u248 jumpi
+   dup2 __FUNC_SIG(toInt8) eq i8 jumpi     
+
 
 
    0x00 0x00 revert
 
    u8:
-      TO_UINT8() 
+      TO_UINT8()
+		ret jump
    u16:
-      TO_UINT16() 
+      TO_UINT16()
+		ret jump
    u24:
-      TO_UINT24() 
+      TO_UINT24()
+		ret jump
    u32:
-      TO_UINT32() 
+      TO_UINT32()
+		ret jump
    u40:
-      TO_UINT40() 
+      TO_UINT40()
+		ret jump
    u48:
-      TO_UINT48() 
+      TO_UINT48()
+		ret jump
    u56:
-      TO_UINT56() 
+      TO_UINT56()
+		ret jump
    u64:
-      TO_UINT64() 
+      TO_UINT64()
+		ret jump
    u72:
       TO_UINT72()
+		ret jump
    u80:
       TO_UINT80()
+		ret jump
    u88:
       TO_UINT88()
+		ret jump
    u96:
       TO_UINT96()
+		ret jump
    u104:
       TO_UINT104()
+		ret jump
    u112:
       TO_UINT112()
+		ret jump
    u120:
       TO_UINT120()
+		ret jump
    u128:
       TO_UINT128()
+		ret jump
    u136:
       TO_UINT136()
+		ret jump
    u144: 
       TO_UINT144()
+		ret jump
    u152:
       TO_UINT152()
+		ret jump
    u160:
       TO_UINT160()
+		ret jump
    u168:
       TO_UINT168()
+		ret jump
    u176:
       TO_UINT176()
+		ret jump
    u184: 
       TO_UINT184()
+		ret jump
    u192: 
       TO_UINT192()
+		ret jump
    u200:
       TO_UINT200()
+		ret jump
    u208: 
-      TO_UINT208()   
+      TO_UINT208()
+		ret jump
    u216: 
-      TO_UINT216()   
+      TO_UINT216()
+		ret jump
    u224:
       TO_UINT224()
+		ret jump
    u232:
       TO_UINT232()
+		ret jump
    u240:
       TO_UINT240()
+		ret jump
    u248:
       TO_UINT248()
-
+		ret jump
+      
+   i8:
+      TO_INT8()
+		ret jump
    ret:
       0x00 mstore
       0x20 0x00 return 
