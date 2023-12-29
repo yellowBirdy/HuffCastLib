@@ -33,6 +33,7 @@
 #define function toUint240(uint256) view returns (uint240)
 #define function toUint248(uint256) view returns (uint248)
 #define function toInt8(uint256) view returns (int8)
+#define function toInt16(uint256) view returns (int16)
 
 
 
@@ -72,7 +73,8 @@
    dup2 __FUNC_SIG(toUint232) eq u232 jumpi
    dup2 __FUNC_SIG(toUint240) eq u240 jumpi
    dup2 __FUNC_SIG(toUint248) eq u248 jumpi
-   dup2 __FUNC_SIG(toInt8) eq i8 jumpi     
+   dup2 __FUNC_SIG(toInt8) eq i8 jumpi  
+   dup2 __FUNC_SIG(toInt16) eq i16 jumpi   
 
 
 
@@ -175,6 +177,10 @@
    i8:
       TO_INT8()
 		ret jump
+   i16:
+      TO_INT16()
+      ret jump
+
    ret:
       0x00 mstore
       0x20 0x00 return 

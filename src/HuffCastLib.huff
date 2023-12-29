@@ -301,3 +301,44 @@
     REVERT_OVERFLOW()
     success:
 }
+#define macro TO_INT16() = takes (1) returns (1) {
+    0x8000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+//define macros to_int24, to_int32, to_int40, to_int48, to_int56, to_int64, to_int72, to_int80, to_int88, to_int96, to_int104, to_int112, to_int120, to_int128, to_int136, to_int144, to_int152, to_int160, to_int168, to_int176, to_int184, to_int192, to_int200, to_int208, to_int216, to_int224, to_int232, to_int240, to_int248
+#define macro TO_INT24() = takes (1) returns (1) {
+    0x800000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_INT32() = takes (1) returns (1) {
+    0x80000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_INT40() = takes (1) returns (1) {
+    0x8000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}
+#define macro TO_INT48() = takes (1) returns (1) {
+    0x800000000000
+    dup2
+    lt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}

@@ -269,6 +269,14 @@ contract HuffCastTest is Test {
         assertEq(abi.decode(abi.encode(casted8),(uint256)), value);
         assertLe(casted8, type(int8).max);
     }
+    function testHappyToInt16(uint256 value) public {
+        vm.assume(value <= type(uint16).max/2);
+
+        int16 casted16 = huffUser.toInt16(value);
+        assertEq(abi.decode(abi.encode(casted16),(uint256)), value);
+        assertLe(casted16, type(int16).max);
+
+    }
     // unhappy paths
     function testUnhappyToInt8(uint256 value) public {
         vm.assume(value > type(uint8).max/2);
@@ -277,6 +285,12 @@ contract HuffCastTest is Test {
         huffUser.toInt8(value);
     }
 
+    function testUnhappyToInt16(uint256 value) public {
+        vm.assume(value > type(uint16).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt16(value);
+    }
     function testUnhappyToUint8(uint256 value) public {
         vm.assume(value > type(uint8).max);
   
@@ -533,6 +547,8 @@ interface SafeCastLibImplementoor {
     function toUint248(uint256 value) external returns (uint248);
 
     function toInt8(uint256) external view returns (int8);
+    function toInt16(uint256) external view returns (int16);
+
 
     error Overflow();
 }
