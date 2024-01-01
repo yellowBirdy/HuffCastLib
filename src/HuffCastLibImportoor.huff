@@ -34,6 +34,36 @@
 #define function toUint248(uint256) view returns (uint248)
 #define function toInt8(uint256) view returns (int8)
 #define function toInt16(uint256) view returns (int16)
+#define function toInt24(uint256) view returns (int24)
+#define function toInt32(uint256) view returns (int32)
+#define function toInt40(uint256) view returns (int40)
+#define function toInt48(uint256) view returns (int48)
+#define function toInt56(uint256) view returns (int56)
+#define function toInt64(uint256) view returns (int64)
+#define function toInt72(uint256) view returns (int72)
+#define function toInt80(uint256) view returns (int80)
+#define function toInt88(uint256) view returns (int88)
+#define function toInt96(uint256) view returns (int96)
+#define function toInt104(uint256) view returns (int104)
+#define function toInt112(uint256) view returns (int112)
+#define function toInt120(uint256) view returns (int120)
+#define function toInt128(uint256) view returns (int128)
+#define function toInt136(uint256) view returns (int136)
+#define function toInt144(uint256) view returns (int144) 
+#define function toInt152(uint256) view returns (int152)
+#define function toInt160(uint256) view returns (int160)
+#define function toInt168(uint256) view returns (int168)
+#define function toInt176(uint256) view returns (int176)
+#define function toInt184(uint256) view returns (int184)
+#define function toInt192(uint256) view returns (int192)
+#define function toInt200(uint256) view returns (int200)
+#define function toInt208(uint256) view returns (int208)
+#define function toInt216(uint256) view returns (int216)
+#define function toInt224(uint256) view returns (int224)
+#define function toInt232(uint256) view returns (int232)
+#define function toInt240(uint256) view returns (int240)
+#define function toInt248(uint256) view returns (int248)
+#define function toInt256(uint256) view returns (int256)
 
 
 
@@ -75,7 +105,36 @@
    dup2 __FUNC_SIG(toUint248) eq u248 jumpi
    dup2 __FUNC_SIG(toInt8) eq i8 jumpi  
    dup2 __FUNC_SIG(toInt16) eq i16 jumpi   
-
+   dup2 __FUNC_SIG(toInt24) eq i24 jumpi
+   dup2 __FUNC_SIG(toInt32) eq i32 jumpi
+   dup2 __FUNC_SIG(toInt40) eq i40 jumpi
+   dup2 __FUNC_SIG(toInt48) eq i48 jumpi
+   dup2 __FUNC_SIG(toInt56) eq i56 jumpi
+   dup2 __FUNC_SIG(toInt64) eq i64 jumpi
+   dup2 __FUNC_SIG(toInt72) eq i72 jumpi
+   dup2 __FUNC_SIG(toInt80) eq i80 jumpi
+   dup2 __FUNC_SIG(toInt88) eq i88 jumpi
+   dup2 __FUNC_SIG(toInt96) eq i96 jumpi
+   dup2 __FUNC_SIG(toInt104) eq i104 jumpi
+   dup2 __FUNC_SIG(toInt112) eq i112 jumpi
+   dup2 __FUNC_SIG(toInt120) eq i120 jumpi
+   dup2 __FUNC_SIG(toInt128) eq i128 jumpi
+   dup2 __FUNC_SIG(toInt136) eq i136 jumpi
+   dup2 __FUNC_SIG(toInt144) eq i144 jumpi
+   dup2 __FUNC_SIG(toInt152) eq i152 jumpi
+   dup2 __FUNC_SIG(toInt160) eq i160 jumpi
+   dup2 __FUNC_SIG(toInt168) eq i168 jumpi
+   dup2 __FUNC_SIG(toInt176) eq i176 jumpi
+   dup2 __FUNC_SIG(toInt184) eq i184 jumpi
+   dup2 __FUNC_SIG(toInt192) eq i192 jumpi
+   dup2 __FUNC_SIG(toInt200) eq i200 jumpi
+   dup2 __FUNC_SIG(toInt208) eq i208 jumpi
+   dup2 __FUNC_SIG(toInt216) eq i216 jumpi
+   dup2 __FUNC_SIG(toInt224) eq i224 jumpi
+   dup2 __FUNC_SIG(toInt232) eq i232 jumpi
+   dup2 __FUNC_SIG(toInt240) eq i240 jumpi
+   dup2 __FUNC_SIG(toInt248) eq i248 jumpi
+   dup2 __FUNC_SIG(toInt256) eq i256 jumpi
 
 
    0x00 0x00 revert
@@ -180,6 +239,97 @@
    i16:
       TO_INT16()
       ret jump
+   i24:
+      TO_INT24()
+      ret jump
+   i32:
+      TO_INT32()
+      ret jump
+   i40:  
+      TO_INT40()
+      ret jump
+   i48:  
+      TO_INT48()
+      ret jump
+   i56:  
+      TO_INT56()
+      ret jump
+   i64:     
+      TO_INT64()
+      ret jump
+   i72:  
+      TO_INT72()
+      ret jump
+   i80:  
+      TO_INT80()
+      ret jump
+   i88:  
+      TO_INT88()
+      ret jump
+   i96:  
+      TO_INT96()
+      ret jump
+   i104: 
+      TO_INT104()
+      ret jump
+   i112: 
+      TO_INT112()
+      ret jump
+   i120: 
+      TO_INT120()
+      ret jump
+   i128: 
+      TO_INT128()
+      ret jump
+   i136: 
+      TO_INT136()
+      ret jump 
+   i144: 
+      TO_INT144()
+      ret jump
+   i152: 
+      TO_INT152()
+      ret jump
+   i160: 
+      TO_INT160()
+      ret jump    
+   i168: 
+      TO_INT168()
+      ret jump
+   i176: 
+      TO_INT176()
+      ret jump
+   i184: 
+      TO_INT184()
+      ret jump
+   i192: 
+      TO_INT192()
+      ret jump
+   i200: 
+      TO_INT200()
+      ret jump
+   i208: 
+      TO_INT208()
+      ret jump
+   i216: 
+      TO_INT216()
+      ret jump
+   i224: 
+      TO_INT224()
+      ret jump
+   i232: 
+      TO_INT232()
+      ret jump
+   i240: 
+      TO_INT240()
+      ret jump
+   i248: 
+      TO_INT248()
+      ret jump
+   i256: 
+      TO_INT256()
+      ret jump
+      
 
    ret:
       0x00 mstore

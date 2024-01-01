@@ -5,6 +5,8 @@ import {HuffStuff} from "lib/HuffStuff.sol";
 import "forge-std/Test.sol";
 import "forge-std/console2.sol";
 
+import {IHuffCastLibImportoor as SafeCastLibImplementoor} from "src/IHuffCastLibImportoor.sol";
+
 contract HuffCastTest is Test {
     SafeCastLibImplementoor public huffUser;
     /// @dev Setup the testing environment.
@@ -262,35 +264,6 @@ contract HuffCastTest is Test {
         assertLe(casted248, type(uint248).max);
 
     }
-    function testHappyToInt8(uint256 value) public {
-        vm.assume(value <= type(uint8).max/2);
-  
-        int8 casted8 = huffUser.toInt8(value);
-        assertEq(abi.decode(abi.encode(casted8),(uint256)), value);
-        assertLe(casted8, type(int8).max);
-    }
-    function testHappyToInt16(uint256 value) public {
-        vm.assume(value <= type(uint16).max/2);
-
-        int16 casted16 = huffUser.toInt16(value);
-        assertEq(abi.decode(abi.encode(casted16),(uint256)), value);
-        assertLe(casted16, type(int16).max);
-
-    }
-    // unhappy paths
-    function testUnhappyToInt8(uint256 value) public {
-        vm.assume(value > type(uint8).max/2);
-  
-        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
-        huffUser.toInt8(value);
-    }
-
-    function testUnhappyToInt16(uint256 value) public {
-        vm.assume(value > type(uint16).max/2);
-
-        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
-        huffUser.toInt16(value);
-    }
     function testUnhappyToUint8(uint256 value) public {
         vm.assume(value > type(uint8).max);
   
@@ -509,46 +482,457 @@ contract HuffCastTest is Test {
         huffUser.toUint248(value);
     }
  
- 
+    function testHappyToInt8(uint256 value) public {
+        vm.assume(value <= type(uint8).max/2);
+  
+        int8 casted8 = huffUser.toInt8(value);
+        assertEq(abi.decode(abi.encode(casted8),(uint256)), value);
+        assertLe(casted8, type(int8).max);
+        assertGe(casted8, 0);
+    }
+    function testHappyToInt16(uint256 value) public {
+        vm.assume(value <= type(uint16).max/2);
+
+        int16 casted16 = huffUser.toInt16(value);
+        assertEq(abi.decode(abi.encode(casted16),(uint256)), value);
+        assertLe(casted16, type(int16).max);
+        assertGe(casted16, 0);
+    }
+    function testHappyToInt24(uint256 value) public {
+        vm.assume(value <= type(uint24).max/2);
+  
+        int24 casted24 = huffUser.toInt24(value);
+        assertEq(abi.decode(abi.encode(casted24),(uint256)), value);
+        assertLe(casted24, type(int24).max);
+        assertGe(casted24, 0);
+    }
+    function testHappyToInt32(uint256 value) public {
+        vm.assume(value <= type(uint32).max/2);
+
+        int32 casted32 = huffUser.toInt32(value);
+        assertEq(abi.decode(abi.encode(casted32),(uint256)), value);
+        assertLe(casted32, type(int32).max);
+        assertGe(casted32, 0);
+    }
+    //  testHappyToIntX tests for int40, int64, int72, int80, int96
+    function testHappyToInt40(uint256 value) public {
+        vm.assume(value <= type(uint40).max/2);
+
+        int40 casted40 = huffUser.toInt40(value);
+        assertEq(abi.decode(abi.encode(casted40),(uint256)), value);
+        assertLe(casted40, type(int40).max);
+        assertGe(casted40, 0);
+    }
+    function testHappyToInt48(uint256 value) public {
+        vm.assume(value <= type(uint48).max/2);
+
+        int48 casted48 = huffUser.toInt48(value);
+        assertEq(abi.decode(abi.encode(casted48),(uint256)), value);
+        assertLe(casted48, type(int48).max);
+        assertGe(casted48, 0);
+    }
+    function testHappyToInt56(uint256 value) public {
+        vm.assume(value <= type(uint56).max/2);
+
+        int56 casted56 = huffUser.toInt56(value);
+        assertEq(abi.decode(abi.encode(casted56),(uint256)), value);
+        assertLe(casted56, type(int56).max);
+        assertGe(casted56, 0);
+    }
+    function testHappyToInt64(uint256 value) public {
+        vm.assume(value <= type(uint64).max/2);
+
+        int64 casted64 = huffUser.toInt64(value);
+        assertEq(abi.decode(abi.encode(casted64),(uint256)), value);
+        assertLe(casted64, type(int64).max);
+        assertGe(casted64, 0);
+    }
+    function testHappyToInt72(uint256 value) public {
+        vm.assume(value <= type(uint72).max/2);
+
+        int72 casted72 = huffUser.toInt72(value);
+        assertEq(abi.decode(abi.encode(casted72),(uint256)), value);
+        assertLe(casted72, type(int72).max);
+        assertGe(casted72, 0);
+    }
+    function testHappyToInt80(uint256 value) public {
+        vm.assume(value <= type(uint80).max/2);
+
+        int80 casted80 = huffUser.toInt80(value);
+        assertEq(abi.decode(abi.encode(casted80),(uint256)), value);
+        assertLe(casted80, type(int80).max);
+        assertGe(casted80, 0);
+    }
+    function testHappyToInt88(uint256 value) public {
+        vm.assume(value <= type(uint88).max/2);
+
+        int88 casted88 = huffUser.toInt88(value);
+        assertEq(abi.decode(abi.encode(casted88),(uint256)), value);
+        assertLe(casted88, type(int88).max);
+        assertGe(casted88, 0);
+    }
+    function testHappyToInt96(uint256 value) public {
+        vm.assume(value <= type(uint96).max/2);
+
+        int96 casted96 = huffUser.toInt96(value);
+        assertEq(abi.decode(abi.encode(casted96),(uint256)), value);
+        assertLe(casted96, type(int96).max);
+        assertGe(casted96, 0);
+    }
+    function testHappyToInt104(uint256 value) public {
+        vm.assume(value <= type(uint104).max/2);
+
+        int104 casted104 = huffUser.toInt104(value);
+        assertEq(abi.decode(abi.encode(casted104),(uint256)), value);
+        assertLe(casted104, type(int104).max);
+        assertGe(casted104, 0);
+    }
+    function testHappyToInt112(uint256 value) public {
+        vm.assume(value <= type(uint112).max/2);
+
+        int112 casted112 = huffUser.toInt112(value);
+        assertEq(abi.decode(abi.encode(casted112),(uint256)), value);
+        assertLe(casted112, type(int112).max);
+        assertGe(casted112, 0);
+    }
+    function testHappyToInt120(uint256 value) public {
+        vm.assume(value <= type(uint120).max/2);
+
+        int120 casted120 = huffUser.toInt120(value);
+        assertEq(abi.decode(abi.encode(casted120),(uint256)), value);
+        assertLe(casted120, type(int120).max);
+        assertGe(casted120, 0);
+    }
+    function testHappyToInt128(uint256 value) public {
+        vm.assume(value <= type(uint128).max/2);
+
+        int128 casted128 = huffUser.toInt128(value);
+        assertEq(abi.decode(abi.encode(casted128),(uint256)), value);
+        assertLe(casted128, type(int128).max);
+        assertGe(casted128, 0);
+    }
+    function testHappyToInt136(uint256 value) public {
+        vm.assume(value <= type(uint136).max/2);
+
+        int136 casted136 = huffUser.toInt136(value);
+        assertEq(abi.decode(abi.encode(casted136),(uint256)), value);
+        assertLe(casted136, type(int136).max);
+        assertGe(casted136, 0);
+    }
+    function testHappyToInt144(uint256 value) public {
+        vm.assume(value <= type(uint144).max/2);
+
+        int144 casted144 = huffUser.toInt144(value);
+        assertEq(abi.decode(abi.encode(casted144),(uint256)), value);
+        assertLe(casted144, type(int144).max);
+        assertGe(casted144, 0);
+    }
+    function testHappyToInt152(uint256 value) public {
+        vm.assume(value <= type(uint152).max/2);
+
+        int152 casted152 = huffUser.toInt152(value);
+        assertEq(abi.decode(abi.encode(casted152),(uint256)), value);
+        assertLe(casted152, type(int152).max);
+        assertGe(casted152, 0);
+    }
+    function testHappyToInt160(uint256 value) public {
+        vm.assume(value <= type(uint160).max/2);
+
+        int160 casted160 = huffUser.toInt160(value);
+        assertEq(abi.decode(abi.encode(casted160),(uint256)), value);
+        assertLe(casted160, type(int160).max);
+        assertGe(casted160, 0);
+    }
+    function testHappyToInt168(uint256 value) public {
+        vm.assume(value <= type(uint168).max/2);
+
+        int168 casted168 = huffUser.toInt168(value);
+        assertEq(abi.decode(abi.encode(casted168),(uint256)), value);
+        assertLe(casted168, type(int168).max);
+        assertGe(casted168, 0);
+    }
+    function testHappyToInt176(uint256 value) public {
+        vm.assume(value <= type(uint176).max/2);
+
+        int176 casted176 = huffUser.toInt176(value);
+        assertEq(abi.decode(abi.encode(casted176),(uint256)), value);
+        assertLe(casted176, type(int176).max);
+        assertGe(casted176, 0);
+    }
+    function testHappyToInt184(uint256 value) public {
+        vm.assume(value <= type(uint184).max/2);
+
+        int184 casted184 = huffUser.toInt184(value);
+        assertEq(abi.decode(abi.encode(casted184),(uint256)), value);
+        assertLe(casted184, type(int184).max);
+        assertGe(casted184, 0);
+    }
+    function testHappyToInt192(uint256 value) public {
+        vm.assume(value <= type(uint192).max/2);
+
+        int192 casted192 = huffUser.toInt192(value);
+        assertEq(abi.decode(abi.encode(casted192),(uint256)), value);
+        assertLe(casted192, type(int192).max);
+        assertGe(casted192, 0);
+    }
+    function testHappyToInt200(uint256 value) public {
+        vm.assume(value <= type(uint200).max/2);
+
+        int200 casted200 = huffUser.toInt200(value);
+        assertEq(abi.decode(abi.encode(casted200),(uint256)), value);
+        assertLe(casted200, type(int200).max);
+        assertGe(casted200, 0);
+    }
+    function testHappyToInt208(uint256 value) public {
+        vm.assume(value <= type(uint208).max/2);
+
+        int208 casted208 = huffUser.toInt208(value);
+        assertEq(abi.decode(abi.encode(casted208),(uint256)), value);
+        assertLe(casted208, type(int208).max);
+        assertGe(casted208, 0);
+    }
+    function testHappyToInt216(uint256 value) public {
+        vm.assume(value <= type(uint216).max/2);
+
+        int216 casted216 = huffUser.toInt216(value);
+        assertEq(abi.decode(abi.encode(casted216),(uint256)), value);
+        assertLe(casted216, type(int216).max);
+        assertGe(casted216, 0);
+    }
+    function testHappyToInt224(uint256 value) public {
+        vm.assume(value <= type(uint224).max/2);
+
+        int224 casted224 = huffUser.toInt224(value);
+        assertEq(abi.decode(abi.encode(casted224),(uint256)), value);
+        assertLe(casted224, type(int224).max);
+        assertGe(casted224, 0);
+    }
+    function testHappyToInt232(uint256 value) public {
+        vm.assume(value <= type(uint232).max/2);
+
+        int232 casted232 = huffUser.toInt232(value);
+        assertEq(abi.decode(abi.encode(casted232),(uint256)), value);
+        assertLe(casted232, type(int232).max);
+        assertGe(casted232, 0);
+    }
+    function testHappyToInt240(uint256 value) public {
+        vm.assume(value <= type(uint240).max/2);
+
+        int240 casted240 = huffUser.toInt240(value);
+        assertEq(abi.decode(abi.encode(casted240),(uint256)), value);
+        assertLe(casted240, type(int240).max);
+        assertGe(casted240, 0);
+    }
+    function testHappyToInt248(uint256 value) public {
+        vm.assume(value <= type(uint248).max/2);
+
+        int248 casted248 = huffUser.toInt248(value);
+        assertEq(abi.decode(abi.encode(casted248),(uint256)), value);
+        assertLe(casted248, type(int248).max);
+        assertGe(casted248, 0);
+    }
+    function testHappyToInt256(uint256 value) public {
+        vm.assume(value <= type(uint256).max/2);
+
+        int256 casted256 = huffUser.toInt256(value);
+        assertEq(abi.decode(abi.encode(casted256),(uint256)), value);
+        assertLe(casted256, type(int256).max);
+        assertGe(casted256, 0);
+    }
+
+    // unhappy paths
+    function testUnhappyToInt8(uint256 value) public {
+        vm.assume(value > type(uint8).max/2);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt8(value);
+    }
+
+    function testUnhappyToInt16(uint256 value) public {
+        vm.assume(value > type(uint16).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt16(value);
+    }
+    function testUnhappyToInt24(uint256 value) public {
+        vm.assume(value > type(uint24).max/2);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt24(value);
+    }
+    function testUnhappyToInt32(uint256 value) public {
+        vm.assume(value > type(uint32).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt32(value);
+    }
+    function testUnhappyToInt40(uint256 value) public {
+        vm.assume(value > type(uint40).max/2);
+  
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt40(value);
+    }
+    function testUnhappyToInt48(uint256 value) public {
+        vm.assume(value > type(uint48).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt48(value);
+    }
+    function testUnhappyToInt56(uint256 value) public {
+        vm.assume(value > type(uint56).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt56(value);
+    }
+    function testUnhappyToInt64(uint256 value) public {
+        vm.assume(value > type(uint64).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt64(value);
+    }
+    function testUnhappyToInt72(uint256 value) public {
+        vm.assume(value > type(uint72).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt72(value);
+    }
+    function testUnhappyToInt80(uint256 value) public {
+        vm.assume(value > type(uint80).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt80(value);
+    }
+    function testUnhappyToInt88(uint256 value) public {
+        vm.assume(value > type(uint88).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt88(value);
+    }
+    function testUnhappyToInt96(uint256 value) public {
+        vm.assume(value > type(uint96).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt96(value);
+    }
+    function testUnhappyToInt104(uint256 value) public {
+        vm.assume(value > type(uint104).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt104(value);
+    }
+    function testUnhappyToInt112(uint256 value) public {
+        vm.assume(value > type(uint112).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt112(value);
+    }   
+    function testUnhappyToInt120(uint256 value) public {
+        vm.assume(value > type(uint120).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt120(value);
+    }
+    function testUnhappyToInt128(uint256 value) public {
+        vm.assume(value > type(uint128).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt128(value);
+    }
+    function testUnhappyToInt136(uint256 value) public {
+        vm.assume(value > type(uint136).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt136(value);
+    }
+    function testUnhappyToInt144(uint256 value) public {
+        vm.assume(value > type(uint144).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt144(value);
+    }
+    function testUnhappyToInt152(uint256 value) public {
+        vm.assume(value > type(uint152).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt152(value);
+    }
+    function testUnhappyToInt160(uint256 value) public {
+        vm.assume(value > type(uint160).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt160(value);
+    }
+    function testUnhappyToInt168(uint256 value) public {
+        vm.assume(value > type(uint168).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt168(value);
+    }
+    function testUnhappyToInt176(uint256 value) public {
+        vm.assume(value > type(uint176).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt176(value);
+    }
+    function testUnhappyToInt184(uint256 value) public {
+        vm.assume(value > type(uint184).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt184(value);
+    }
+    function testUnhappyToInt192(uint256 value) public {
+        vm.assume(value > type(uint192).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt192(value);
+    }
+    function testUnhappyToInt200(uint256 value) public {
+        vm.assume(value > type(uint200).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt200(value);
+    }
+    function testUnhappyToInt208(uint256 value) public {
+        vm.assume(value > type(uint208).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt208(value);
+    }
+    function testUnhappyToInt216(uint256 value) public {
+        vm.assume(value > type(uint216).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt216(value);
+    }
+    function testUnhappyToInt224(uint256 value) public {
+        vm.assume(value > type(uint224).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt224(value);
+    }
+    function testUnhappyToInt232(uint256 value) public {
+        vm.assume(value > type(uint232).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt232(value);
+    }
+    function testUnhappyToInt240(uint256 value) public {
+        vm.assume(value > type(uint240).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt240(value);
+    }
+    function testUnhappyToInt248(uint256 value) public {
+        vm.assume(value > type(uint248).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt248(value);
+    }
+    function testUnhappyToInt256(uint256 value) public {
+        vm.assume(value > type(uint256).max/2);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toInt256(value);
+    }
 }
 
-
-interface SafeCastLibImplementoor {
-    function toUint8(uint256 value) external returns (uint8);
-    function toUint16(uint256 value) external returns (uint16);
-    function toUint24(uint256 value) external returns (uint24);
-    function toUint32(uint256 value) external returns (uint32);
-    function toUint40(uint256 value) external returns (uint40);
-    function toUint48(uint256 value) external returns (uint48);
-    function toUint56(uint256 value) external returns (uint56);
-    function toUint64(uint256 value) external returns (uint64);
-    function toUint72(uint256 value) external returns (uint72);
-    function toUint80(uint256 value) external returns (uint80);
-    function toUint88(uint256 value) external returns (uint88);
-    function toUint96(uint256 value) external returns (uint96);
-    function toUint104(uint256 value) external returns (uint104);
-    function toUint112(uint256 value) external returns (uint112);
-    function toUint120(uint256 value) external returns (uint120);
-    function toUint128(uint256 value) external returns (uint128);
-    function toUint136(uint256 value) external returns (uint136);
-    function toUint144(uint256 value) external returns (uint144);
-    function toUint152(uint256 value) external returns (uint152);
-    function toUint160(uint256 value) external returns (uint160);
-    function toUint168(uint256 value) external returns (uint168);
-    function toUint176(uint256 value) external returns (uint176);
-    function toUint184(uint256 value) external returns (uint184);
-    function toUint192(uint256 value) external returns (uint192);
-    function toUint200(uint256 value) external returns (uint200);
-    function toUint208(uint256 value) external returns (uint208);
-    function toUint216(uint256 value) external returns (uint216);
-    function toUint224(uint256 value) external returns (uint224);
-    function toUint232(uint256 value) external returns (uint232);
-    function toUint240(uint256 value) external returns (uint240);
-    function toUint248(uint256 value) external returns (uint248);
-
-    function toInt8(uint256) external view returns (int8);
-    function toInt16(uint256) external view returns (int16);
-
-
-    error Overflow();
-}
