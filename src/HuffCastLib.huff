@@ -552,3 +552,13 @@
     REVERT_OVERFLOW()
     success:
 }
+
+
+#define macro TO_UINT256() = takes (1) returns (1) {
+    0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    dup2
+    sgt
+    success jumpi
+    REVERT_OVERFLOW()
+    success:
+}

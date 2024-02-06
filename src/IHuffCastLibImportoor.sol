@@ -53,6 +53,7 @@ interface IHuffCastLibImportoor {
 	function toUint24(uint256) external view returns (uint24);
 	function toUint240(uint256) external view returns (uint240);
 	function toUint248(uint256) external view returns (uint248);
+	function toUint256(int256) external view returns (uint256);
 	function toUint32(uint256) external view returns (uint32);
 	function toUint40(uint256) external view returns (uint40);
 	function toUint48(uint256) external view returns (uint48);

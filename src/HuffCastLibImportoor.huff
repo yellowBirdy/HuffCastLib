@@ -64,6 +64,8 @@
 #define function toInt240(uint256) view returns (int240)
 #define function toInt248(uint256) view returns (int248)
 #define function toInt256(uint256) view returns (int256)
+#define function toUint256(int256) view returns (uint256)
+
 
 
 
@@ -135,6 +137,7 @@
    dup2 __FUNC_SIG(toInt240) eq i240 jumpi
    dup2 __FUNC_SIG(toInt248) eq i248 jumpi
    dup2 __FUNC_SIG(toInt256) eq i256 jumpi
+   dup2 __FUNC_SIG(toUint256) eq u256 jumpi
 
 
    0x00 0x00 revert
@@ -328,6 +331,9 @@
       ret jump
    i256: 
       TO_INT256()
+      ret jump
+   u256: 
+      TO_UINT256()
       ret jump
       
 

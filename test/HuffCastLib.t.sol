@@ -934,5 +934,19 @@ contract HuffCastTest is Test {
         vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
         huffUser.toInt256(value);
     }
+
+    // int256 to uint256
+    function testHappyToUint256(int256 value) public {
+        vm.assume(value >= 0);
+
+        uint256 castingResult = huffUser.toUint256(value);
+        assertEq(castingResult, uint256(value));
+    }
+    function testUnappyToUint256(int256 value) public {
+        vm.assume(value < 0);
+
+        vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
+        huffUser.toUint256(value);
+    }
 }
 
