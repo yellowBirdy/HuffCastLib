@@ -1,3 +1,5 @@
+pragma solidity ^0.8.15;
+
 interface IHuffCastLibImportoor {
 	error Overflow();
 	function toInt104(uint256) external view returns (int104);

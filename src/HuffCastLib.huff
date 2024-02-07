@@ -1,31 +1,72 @@
-//#define constant __UINT248_MAX_PLUS_ONE = 
-//#define constant __UINT240_MAX_PLUS_ONE = 
-//#define constant __UINT232_MAX_PLUS_ONE = 
-//#define constant __UINT224_MAX_PLUS_ONE = 
-//#define constant __UINT216_MAX_PLUS_ONE = 
-//#define constant __UINT208_MAX_PLUS_ONE = 
-//#define constant __UINT200_MAX_PLUS_ONE = 
-//#define constant __UINT192_MAX_PLUS_ONE = 
-//#define constant __UINT184_MAX_PLUS_ONE = 
-//#define constant __UINT176_MAX_PLUS_ONE = 
-//#define constant __UINT168_MAX_PLUS_ONE = 
-//#define constant __UINT160_MAX_PLUS_ONE = 
-//#define constant __UINT152_MAX_PLUS_ONE = 
-//#define constant __UINT144_MAX_PLUS_ONE = 
-//#define constant __UINT136_MAX_PLUS_ONE = 
-//#define constant __UINT128_MAX_PLUS_ONE = 
-//#define constant __UINT120_MAX_PLUS_ONE = 
-//#define constant __UINT112_MAX_PLUS_ONE = 
-//#define constant __UINT104_MAX_PLUS_ONE = 
-//#define constant __UINT96_MAX_PLUS_ONE  = 
-//#define constant __UINT88_MAX_PLUS_ONE  = 
-//#define constant __UINT80_MAX_PLUS_ONE  = 
-//#define constant __UINT72_MAX_PLUS_ONE  = 
-//#define constant __UINT64_MAX_PLUS_ONE  = 
-//#define constant __UINT56_MAX_PLUS_ONE  = 
-//#define constant __UINT48_MAX_PLUS_ONE  = 
-//#define constant __UINT40_MAX_PLUS_ONE  = 
-//#define constant __UINT32_MAX_PLUS_ONE  = 
+#define constant _INT8_MAX_PLUS_ONE   =   0x80
+#define constant _INT16_MAX_PLUS_ONE  =   0x8000
+#define constant _INT24_MAX_PLUS_ONE  =   0x800000
+#define constant _INT32_MAX_PLUS_ONE  =   0x80000000
+#define constant _INT40_MAX_PLUS_ONE  =   0x8000000000
+#define constant _INT48_MAX_PLUS_ONE  =   0x800000000000
+#define constant _INT56_MAX_PLUS_ONE  =   0x80000000000000
+#define constant _INT64_MAX_PLUS_ONE  =   0x8000000000000000
+#define constant _INT72_MAX_PLUS_ONE  =   0x800000000000000000
+#define constant _INT80_MAX_PLUS_ONE  =   0x80000000000000000000
+#define constant _INT88_MAX_PLUS_ONE  =   0x8000000000000000000000
+#define constant _INT96_MAX_PLUS_ONE  =   0x800000000000000000000000
+#define constant _INT104_MAX_PLUS_ONE =   0x80000000000000000000000000
+#define constant _INT112_MAX_PLUS_ONE =   0x8000000000000000000000000000
+#define constant _INT120_MAX_PLUS_ONE =   0x800000000000000000000000000000
+#define constant _INT128_MAX_PLUS_ONE =   0x80000000000000000000000000000000
+#define constant _INT136_MAX_PLUS_ONE =   0x8000000000000000000000000000000000
+#define constant _INT144_MAX_PLUS_ONE =   0x800000000000000000000000000000000000
+#define constant _INT152_MAX_PLUS_ONE =   0x80000000000000000000000000000000000000
+#define constant _INT160_MAX_PLUS_ONE =   0x8000000000000000000000000000000000000000
+#define constant _INT168_MAX_PLUS_ONE =   0x800000000000000000000000000000000000000000
+#define constant _INT176_MAX_PLUS_ONE =   0x80000000000000000000000000000000000000000000
+#define constant _INT184_MAX_PLUS_ONE =   0x8000000000000000000000000000000000000000000000
+#define constant _INT192_MAX_PLUS_ONE =   0x800000000000000000000000000000000000000000000000
+#define constant _INT200_MAX_PLUS_ONE =   0x80000000000000000000000000000000000000000000000000
+#define constant _INT208_MAX_PLUS_ONE =   0x8000000000000000000000000000000000000000000000000000
+#define constant _INT216_MAX_PLUS_ONE =   0x800000000000000000000000000000000000000000000000000000
+#define constant _INT224_MAX_PLUS_ONE =   0x80000000000000000000000000000000000000000000000000000000
+#define constant _INT232_MAX_PLUS_ONE =   0x8000000000000000000000000000000000000000000000000000000000
+#define constant _INT240_MAX_PLUS_ONE =   0x800000000000000000000000000000000000000000000000000000000000
+#define constant _INT248_MAX_PLUS_ONE =   0x80000000000000000000000000000000000000000000000000000000000000
+#define constant _INT256_MAX_PLUS_ONE =   0x8000000000000000000000000000000000000000000000000000000000000000
+
+
+#define constant _UINT8_MAX_PLUS_ONE   =   0x100
+#define constant _UINT16_MAX_PLUS_ONE  =   0x10000
+#define constant _UINT24_MAX_PLUS_ONE  =   0x1000000
+#define constant _UINT32_MAX_PLUS_ONE  =   0x100000000
+#define constant _UINT40_MAX_PLUS_ONE  =   0x10000000000
+#define constant _UINT48_MAX_PLUS_ONE  =   0x1000000000000
+#define constant _UINT56_MAX_PLUS_ONE  =   0x100000000000000
+#define constant _UINT64_MAX_PLUS_ONE  =   0x10000000000000000
+#define constant _UINT72_MAX_PLUS_ONE  =   0x1000000000000000000
+#define constant _UINT80_MAX_PLUS_ONE  =   0x100000000000000000000
+#define constant _UINT88_MAX_PLUS_ONE  =   0x10000000000000000000000
+#define constant _UINT96_MAX_PLUS_ONE  =   0x1000000000000000000000000
+#define constant _UINT104_MAX_PLUS_ONE =   0x100000000000000000000000000
+#define constant _UINT112_MAX_PLUS_ONE =   0x10000000000000000000000000000
+#define constant _UINT120_MAX_PLUS_ONE =   0x1000000000000000000000000000000
+#define constant _UINT128_MAX_PLUS_ONE =   0x100000000000000000000000000000000
+#define constant _UINT136_MAX_PLUS_ONE =   0x10000000000000000000000000000000000
+#define constant _UINT144_MAX_PLUS_ONE =   0x1000000000000000000000000000000000000
+#define constant _UINT152_MAX_PLUS_ONE =   0x100000000000000000000000000000000000000
+#define constant _UINT160_MAX_PLUS_ONE =   0x10000000000000000000000000000000000000000
+#define constant _UINT168_MAX_PLUS_ONE =   0x1000000000000000000000000000000000000000000
+#define constant _UINT176_MAX_PLUS_ONE =   0x100000000000000000000000000000000000000000000
+#define constant _UINT184_MAX_PLUS_ONE =   0x10000000000000000000000000000000000000000000000
+#define constant _UINT192_MAX_PLUS_ONE =   0x1000000000000000000000000000000000000000000000000
+#define constant _UINT200_MAX_PLUS_ONE =   0x100000000000000000000000000000000000000000000000000
+#define constant _UINT208_MAX_PLUS_ONE =   0x10000000000000000000000000000000000000000000000000000
+#define constant _UINT216_MAX_PLUS_ONE =   0x1000000000000000000000000000000000000000000000000000000
+#define constant _UINT224_MAX_PLUS_ONE =   0x100000000000000000000000000000000000000000000000000000000
+#define constant _UINT232_MAX_PLUS_ONE =   0x10000000000000000000000000000000000000000000000000000000000
+#define constant _UINT240_MAX_PLUS_ONE =   0x1000000000000000000000000000000000000000000000000000000000000
+#define constant _UINT248_MAX_PLUS_ONE =   0x100000000000000000000000000000000000000000000000000000000000000
+
+
+
+#define constant _INT256_ZERO = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 
 #define error Overflow()
@@ -43,7 +84,7 @@
     0x04 0x00 revert
 }
 #define macro TO_UINT8() = takes (1) returns (1) {  
-    0x100            
+    [_UINT8_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -51,7 +92,7 @@
     success:           
 }
 #define macro TO_UINT16() = takes (1) returns (1) {  
-    0x10000        
+    [_UINT16_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -59,7 +100,7 @@
     success:            
 }
 #define macro TO_UINT24() = takes (1) returns (1) {  
-    0x1000000            
+    [_UINT24_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -67,7 +108,7 @@
     success:           
 }
 #define macro TO_UINT32() = takes (1) returns (1) {  
-    0x100000000        
+    [_UINT32_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -75,7 +116,7 @@
     success:            
 }
 #define macro TO_UINT40() = takes (1) returns (1) {  
-    0x10000000000        
+    [_UINT40_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -83,7 +124,7 @@
     success:            
 }
 #define macro TO_UINT48() = takes (1) returns (1) {  
-    0x1000000000000        
+    [_UINT48_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -91,7 +132,7 @@
     success:            
 }
 #define macro TO_UINT56() = takes (1) returns (1) {  
-    0x100000000000000        
+    [_UINT56_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -99,7 +140,7 @@
     success:            
 }
 #define macro TO_UINT64() = takes (1) returns (1) {  
-    0x10000000000000000        
+    [_UINT64_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -107,7 +148,7 @@
     success:            
 }
 #define macro TO_UINT72() = takes (1) returns (1) {  
-    0x1000000000000000000        
+    [_UINT72_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -115,7 +156,7 @@
     success:            
 }
 #define macro TO_UINT80() = takes (1) returns (1) {  
-    0x100000000000000000000        
+    [_UINT80_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -123,7 +164,7 @@
     success:            
 }
 #define macro TO_UINT88() = takes (1) returns (1) {  
-    0x10000000000000000000000        
+    [_UINT88_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -131,7 +172,7 @@
     success:            
 }
 #define macro TO_UINT96() = takes (1) returns (1) {  
-    0x1000000000000000000000000        
+    [_UINT96_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -140,7 +181,7 @@
 }
 // macros for 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248
 #define macro TO_UINT104() = takes (1) returns (1) {
-    0x100000000000000000000000000        
+    [_UINT104_MAX_PLUS_ONE]            
     dup2             
     lt              
     success jumpi     
@@ -148,7 +189,7 @@
     success:            
 }
 #define macro TO_UINT112() = takes (1) returns (1) {
-    0x10000000000000000000000000000        
+    [_UINT112_MAX_PLUS_ONE]                
     dup2             
     lt              
     success jumpi     
@@ -156,7 +197,7 @@
     success:            
 }
 #define macro TO_UINT120() = takes (1) returns (1) {
-    0x1000000000000000000000000000000        
+    [_UINT120_MAX_PLUS_ONE]                            
     dup2             
     lt              
     success jumpi     
@@ -164,7 +205,7 @@
     success:            
 }
 #define macro TO_UINT128() = takes (1) returns (1) {
-    0x100000000000000000000000000000000
+    [_UINT128_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -172,7 +213,7 @@
     success:
 }
 #define macro TO_UINT136() = takes (1) returns (1) {
-    0x10000000000000000000000000000000000
+    [_UINT136_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -180,7 +221,7 @@
     success:
 }
 #define macro TO_UINT144() = takes (1) returns (1) {
-    0x1000000000000000000000000000000000000
+    [_UINT144_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -188,7 +229,7 @@
     success:
 }
 #define macro TO_UINT152() = takes (1) returns (1) {
-    0x100000000000000000000000000000000000000
+    [_UINT152_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -196,7 +237,7 @@
     success:
 }
 #define macro TO_UINT160() = takes (1) returns (1) {   
-    0x10000000000000000000000000000000000000000
+    [_UINT160_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -204,7 +245,7 @@
     success:
 }
 #define macro TO_UINT168() = takes (1) returns (1) {
-    0x1000000000000000000000000000000000000000000
+    [_UINT168_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -212,7 +253,7 @@
     success:
 }
 #define macro TO_UINT176() = takes (1) returns (1) {
-    0x100000000000000000000000000000000000000000000
+    [_UINT176_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -220,7 +261,7 @@
     success:
 }
 #define macro TO_UINT184() = takes (1) returns (1) {
-    0x10000000000000000000000000000000000000000000000
+    [_UINT184_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -228,7 +269,7 @@
     success:
 }
 #define macro TO_UINT192() = takes (1) returns (1) {
-    0x1000000000000000000000000000000000000000000000000
+    [_UINT192_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -236,7 +277,7 @@
     success:
 }
 #define macro TO_UINT200() = takes (1) returns (1) {
-    0x100000000000000000000000000000000000000000000000000
+    [_UINT200_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -244,7 +285,7 @@
     success:
 }
 #define macro TO_UINT208() = takes (1) returns (1) {
-    0x10000000000000000000000000000000000000000000000000000
+    [_UINT208_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -252,7 +293,7 @@
     success:
 }
 #define macro TO_UINT216() = takes (1) returns (1) {
-    0x1000000000000000000000000000000000000000000000000000000
+    [_UINT216_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -260,7 +301,7 @@
     success:
 }
 #define macro TO_UINT224() = takes (1) returns (1) {
-    0x100000000000000000000000000000000000000000000000000000000
+    [_UINT224_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -268,7 +309,7 @@
     success:
 }
 #define macro TO_UINT232() = takes (1) returns (1) {
-    0x10000000000000000000000000000000000000000000000000000000000
+    [_UINT232_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -276,7 +317,7 @@
     success:
 }
 #define macro TO_UINT240() = takes (1) returns (1) {
-    0x1000000000000000000000000000000000000000000000000000000000000
+    [_UINT240_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -284,7 +325,7 @@
     success:
 }
 #define macro TO_UINT248() = takes (1) returns (1) {
-    0x100000000000000000000000000000000000000000000000000000000000000
+    [_UINT248_MAX_PLUS_ONE]                            
     dup2
     lt
     success jumpi
@@ -294,7 +335,7 @@
 
 
 #define macro TO_INT8() = takes (1) returns (1) {
-    0x80  
+    [_INT8_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -302,7 +343,7 @@
     success:
 }
 #define macro TO_INT16() = takes (1) returns (1) {
-    0x8000
+    [_INT16_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -311,7 +352,7 @@
 }
 //define macros to_int24, to_int32, to_int40, to_int48, to_int56, to_int64, to_int72, to_int80, to_int88, to_int96, to_int104, to_int112, to_int120, to_int128, to_int136, to_int144, to_int152, to_int160, to_int168, to_int176, to_int184, to_int192, to_int200, to_int208, to_int216, to_int224, to_int232, to_int240, to_int248
 #define macro TO_INT24() = takes (1) returns (1) {
-    0x800000
+    [_INT24_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -319,7 +360,7 @@
     success:
 }
 #define macro TO_INT32() = takes (1) returns (1) {
-    0x80000000
+    [_INT32_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -327,7 +368,7 @@
     success:
 }
 #define macro TO_INT40() = takes (1) returns (1) {
-    0x8000000000
+    [_INT40_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -335,7 +376,7 @@
     success:
 }
 #define macro TO_INT48() = takes (1) returns (1) {
-    0x800000000000
+    [_INT48_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -343,7 +384,7 @@
     success:
 }
 #define macro TO_INT56() = takes (1) returns (1) {
-    0x80000000000000
+    [_INT56_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -351,7 +392,7 @@
     success:
 }
 #define macro TO_INT64() = takes (1) returns (1) {
-    0x8000000000000000
+    [_INT64_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -359,7 +400,7 @@
     success:
 }
 #define macro TO_INT72() = takes (1) returns (1) {
-    0x800000000000000000
+    [_INT72_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -367,7 +408,7 @@
     success:
 }
 #define macro TO_INT80() = takes (1) returns (1) {
-    0x80000000000000000000
+    [_INT80_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -375,7 +416,7 @@
     success:
 }
 #define macro TO_INT88() = takes (1) returns (1) {
-    0x8000000000000000000000
+    [_INT88_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -383,7 +424,7 @@
     success:
 }
 #define macro TO_INT96() = takes (1) returns (1) {
-    0x800000000000000000000000
+    [_INT96_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -392,7 +433,7 @@
 }
 // macros for 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248
 #define macro TO_INT104() = takes (1) returns (1) {
-    0x80000000000000000000000000
+    [_INT104_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -400,7 +441,7 @@
     success:
 }
 #define macro TO_INT112() = takes (1) returns (1) {
-    0x8000000000000000000000000000
+    [_INT112_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -408,7 +449,7 @@
     success:
 }
 #define macro TO_INT120() = takes (1) returns (1) {
-    0x800000000000000000000000000000
+    [_INT120_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -416,7 +457,7 @@
     success:
 }
 #define macro TO_INT128() = takes (1) returns (1) {
-    0x80000000000000000000000000000000
+    [_INT128_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -425,7 +466,7 @@
 }
 // define all remaining macros up to int256 
 #define macro TO_INT136() = takes (1) returns (1) {
-    0x8000000000000000000000000000000000
+    [_INT136_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -433,7 +474,7 @@
     success:
 }
 #define macro TO_INT144() = takes (1) returns (1) {
-    0x800000000000000000000000000000000000
+    [_INT144_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -441,7 +482,7 @@
     success:
 }
 #define macro TO_INT152() = takes (1) returns (1) {
-    0x80000000000000000000000000000000000000
+    [_INT152_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -449,7 +490,7 @@
     success:
 }
 #define macro TO_INT160() = takes (1) returns (1) {
-    0x8000000000000000000000000000000000000000
+    [_INT160_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -457,7 +498,7 @@
     success:
 }
 #define macro TO_INT168() = takes (1) returns (1) {
-    0x800000000000000000000000000000000000000000
+    [_INT168_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -465,7 +506,7 @@
     success:
 }
 #define macro TO_INT176() = takes (1) returns (1) {
-    0x80000000000000000000000000000000000000000000
+    [_INT176_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -473,7 +514,7 @@
     success:
 }
 #define macro TO_INT184() = takes (1) returns (1) {
-    0x8000000000000000000000000000000000000000000000
+    [_INT184_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -481,7 +522,7 @@
     success:
 }
 #define macro TO_INT192() = takes (1) returns (1) {
-    0x800000000000000000000000000000000000000000000000
+    [_INT192_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -489,7 +530,7 @@
     success:
 }
 #define macro TO_INT200() = takes (1) returns (1) {
-    0x80000000000000000000000000000000000000000000000000
+    [_INT200_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -497,7 +538,7 @@
     success:
 }
 #define macro TO_INT208() = takes (1) returns (1) {
-    0x8000000000000000000000000000000000000000000000000000
+    [_INT208_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -505,7 +546,7 @@
     success:
 }
 #define macro TO_INT216() = takes (1) returns (1) {
-    0x800000000000000000000000000000000000000000000000000000
+    [_INT216_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -513,7 +554,7 @@
     success:
 }
 #define macro TO_INT224() = takes (1) returns (1) {
-    0x80000000000000000000000000000000000000000000000000000000
+    [_INT224_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -521,7 +562,7 @@
     success:
 }
 #define macro TO_INT232() = takes (1) returns (1) {
-    0x8000000000000000000000000000000000000000000000000000000000
+    [_INT232_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -529,7 +570,7 @@
     success:
 }
 #define macro TO_INT240() = takes (1) returns (1) {
-    0x800000000000000000000000000000000000000000000000000000000000
+    [_INT240_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -537,7 +578,7 @@
     success:
 }
 #define macro TO_INT248() = takes (1) returns (1) {
-    0x80000000000000000000000000000000000000000000000000000000000000
+    [_INT248_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -545,7 +586,7 @@
     success:
 }
 #define macro TO_INT256() = takes (1) returns (1) {
-    0x8000000000000000000000000000000000000000000000000000000000000000
+    [_INT256_MAX_PLUS_ONE]  
     dup2
     lt
     success jumpi
@@ -555,7 +596,7 @@
 
 
 #define macro TO_UINT256() = takes (1) returns (1) {
-    0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    [_INT256_ZERO]
     dup2
     sgt
     success jumpi

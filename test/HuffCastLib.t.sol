@@ -946,7 +946,7 @@ contract HuffCastTest is Test {
         vm.assume(value < 0);
 
         vm.expectRevert(SafeCastLibImplementoor.Overflow.selector);  //  Overflow() selector
-        huffUser.toUint256(value);
+         huffUser.toUint256(value);
     }
 }
 
